@@ -14,14 +14,15 @@ async function processMoney(){
     }
   } else {
     let dados; 
-    const api = `https://economia.awesomeapi.com.br/json/last/${currencyInput}-${currencyOutput}?token=14847feade291f1c1e5632b53ee447d8b3da1dbf65f8171ddf2f1edf4cdc2100`;
+    const api = `https://v6.exchangerate-api.com/v6/a006125ed4c025d1dc51bc2f/pair/${currencyInput}/${currencyOutput}`;
     await fetch(api).then((response) => response.json()).then((data) => dados = data )
     const currency = currencyInput.concat(currencyOutput);
     try {
-      moneyOutput = (money * dados[currency].ask).toLocaleString('pt-BR', { style: "currency", currency: currencyOutput, maximumFractionDigits: 2, minimumFractionDigits: 2 })
+      moneyOutput = (money * dados.conversion_rate).toLocaleString('pt-BR', { style: "currency", currency: currencyOutput, maximumFractionDigits: 2, minimumFractionDigits: 2 })
     } catch (error) {
-      moneyOutput = (money * dados[currency].ask).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
+      moneyOutput = (money * dados.conversion_rate).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
     }
+    if (money * dados.conversion_rate <= 0.1) moneyOutput = (money * dados.conversion_rate).toLocaleString('pt-BR', { style: 'currency', currency: currencyOutput, maximumFractionDigits: 6})
   }
   document.getElementById("moneyOutput").innerHTML = moneyOutput;
 };
@@ -30,8 +31,8 @@ document.getElementById("moneyInput").onkeydown = async function(e) {
   if (e.key === 'Enter') {
     await processMoney();
   }
-}
+};
 
 document.querySelector("button[data-type=converter]") = async function(e) {
   await processMoney();
-}
+};
