@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Conversor de Moedas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <header>
+        <h1>Conversor de Moedas</h1>
+    </header>
+    <main>
+        <section class="section_currency">
+            <article class="article_info">
+                <p class="info_amount">Quantia</p>
+                <p class="info_of">De:</p>
+                <p class="info_to">Para:</p>
+
+                <input class="input_amount" autocomplete="none" id="moneyInput">
+                <form>
+                    <select name="list_one" class="list_one" id="currencyInput">
+                        <option value="USD">USD</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BTC">BTC</option>
+                    </select>
+                </form>
+                <button class="change"> > </button>
+                <form>
+                    <select name="list_two" class="list_two" id="currencyOutput">
+                        <option value="USD">USD</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BTC">BTC</option>
+                    </select>
+                </form>
+            </article>
+        </section>
+
+        <section class="section_result">
+            <article class="article_result">
+                <p id="moneyOutput" class="result_amount">R$ 0000,00</p>
+                <button type="button" onclick="processMoney()" class="result_btn">Converter</button>
+            </article>
+        </section>
+
+        <section class="background">
+            <article>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </article>
+        </section>
+    </main>
+
+    
+    <script src='main.js'></script> 
+</body>
+</html>

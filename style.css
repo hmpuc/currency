@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #0d5e03;
+    width: 100vw;
+    min-height: 75px;
+}
+h1{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 86vh;
+}
+
+.section_currency{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 72vw;
+    height: 20vh;
+    border-radius: 15px 15px 0 0;
+    box-shadow: -4px 0 6px 0 #555;
+
+}
+.article_info{
+    display: grid;
+    grid-template-columns: 24vw 13vw 1.1cm 13vw;
+    grid-template-rows: 0.6cm 1.3cm;
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
+}
+.info_to{
+    grid-column: 4/5;
+}
+.info_amount, .info_of, .info_to{
+    font-weight: 600;
+    font-size: 25px;
+}
+.input_amount{
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.list_one, .list_two{
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 40px;
+}
+.change{
+    border-radius: 50px;
+    color: #6e0a0a;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.change:hover{
+    box-shadow: -0.5px 0.5px 4px 0 rgb(56, 216, 91);
+    font-size: 16px;
+}
+
+.section_result{
+    background-color: #fff;
+    width: 72vw;
+    height: 15vh;
+    border-radius: 0 0 15px 15px;
+    box-shadow: -4px 6px 6px 0 #444;
+}
+.article_result{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 68vw;
+    height: 12vh;
+}
+.result_btn{
+    cursor: pointer;
+    padding: 6px 10px;
+    font-size: 1.6rem;
+    color: #fff;
+    background: rgb(14, 148, 2);
+    border: 2px solid rgb(0, 235, 39);
+    border-radius: 8px;
+    margin-right: 0.7cm;
+}
+.result_btn:hover{
+    background: rgb(3, 95, 11);
+    box-shadow: -2px 0 6px 0 rgb(68, 238, 105);
+
+}
+.result_amount{
+    margin-left: 8vw;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border: 1px solid #777;
+    padding: 8px 10px;
+    box-shadow: -2px 0 6px 0 rgb(53, 88, 62);
+
+}
+.background{
+    position: absolute;
+    text-align: center;
+    background: linear-gradient(60deg, rgb(7, 99, 14) 0%, rgb(2, 206, 12) 100%);
+    height: 86vh;
+    z-index: -1;
+}
+.waves{
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+    margin-bottom: -7px;
+    bottom: -66vh;
+}
