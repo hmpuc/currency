@@ -27,12 +27,68 @@ async function processMoney(){
   document.getElementById("moneyOutput").innerHTML = moneyOutput;
 };
 
+async function processFlag() {
+
+  const value = document.getElementById('currencyOutput').value;
+  const countryCode = document.getElementById('currencyOutput').querySelector(`option[value=${value}]`).getAttribute("data-country");
+  alert(countryCode)
+  let imageUrl;
+  const apiUrl = `https://api.api-ninjas.com/v1/countryflag?country=${countryCode}`
+  await fetch(apiUrl, { method: 'GET', headers: { 'X-Api-Key': 'qIlgw54fbjCvqxB1YFp0qg==QQybneFRQ2BH2F3y'}})
+    .then(response => response.json())
+    .then(data => { imageUrl = data.square_image_url })
+    .catch(error => {
+      console.error(error);
+      return '';
+    });
+  
+  const image = document.getElementById('imageResult');
+  image.src = imageUrl;
+  
+}
+
 document.getElementById("moneyInput").onkeydown = async function(e) {
   if (e.key === 'Enter') {
     await processMoney();
+    await processFlag()
   }
 };
 
-document.querySelector("button[data-type=converter]") = async function(e) {
+document.querySelector("button[data-type=converter]") = async function() {
   await processMoney();
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+  
+  async function fetchFlag(countryCode) {
+    const apiUrl = `https://api.api-ninjas.com/v1/countryflag?country=${countryCode}`;
+  
+    return fetch(apiUrl, { method: 'GET', headers: { 'X-Api-Key': 'qIlgw54fbjCvqxB1YFp0qg==QQybneFRQ2BH2F3y'}})
+        .then(response => response.json())
+        .then(data => { return data.square_image_url })
+        .catch(error => {
+            console.error(error);
+            return '';
+        });
+  }
+  
+  async function addFlagsToSelect() {
+  
+    const selectElement = document.getElementById('currencyOutput');
+    const options = selectElement.querySelectorAll('option');
+  
+    for (const option of options) {
+        const countryCode = option.getAttribute('data-country');
+        const flagUrl = await fetchFlag(countryCode);
+  
+        if (flagUrl) {
+          
+        }
+    }
+  }
+
+  addFlagsToSelect();
+});
+
+
+  

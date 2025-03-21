@@ -83,9 +83,9 @@ main{
 .article_result{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 68vw;
     height: 12vh;
+    gap: 10px;
 }
 .result_btn{
     cursor: pointer;
@@ -95,15 +95,17 @@ main{
     background: rgb(14, 148, 2);
     border: 2px solid rgb(0, 235, 39);
     border-radius: 8px;
-    margin-right: 0.7cm;
+    margin-left: 10cm;
 }
 .result_btn:hover{
     background: rgb(3, 95, 11);
     box-shadow: -2px 0 6px 0 rgb(68, 238, 105);
 
 }
-.result_amount{
+.imageResult{
     margin-left: 8vw;
+}
+.result_amount{
     font-size: 1.3rem;
     border-radius: 10px;
     border: 1px solid #777;
