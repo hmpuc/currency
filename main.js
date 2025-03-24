@@ -31,12 +31,11 @@ async function processFlag() {
 
   const value = document.getElementById('currencyOutput').value;
   const countryCode = document.getElementById('currencyOutput').querySelector(`option[value=${value}]`).getAttribute("data-country");
-  alert(countryCode)
   let imageUrl;
   const apiUrl = `https://api.api-ninjas.com/v1/countryflag?country=${countryCode}`
   await fetch(apiUrl, { method: 'GET', headers: { 'X-Api-Key': 'qIlgw54fbjCvqxB1YFp0qg==QQybneFRQ2BH2F3y'}})
     .then(response => response.json())
-    .then(data => { imageUrl = data.square_image_url })
+    .then(data => { imageUrl = data.square_image_url; alert(data.square_image_url) })
     .catch(error => {
       console.error(error);
       return '';
@@ -47,47 +46,31 @@ async function processFlag() {
   
 }
 
+async function processClick() {
+  processMoney();
+  processFlag();
+}
+
 document.getElementById("moneyInput").onkeydown = async function(e) {
   if (e.key === 'Enter') {
     await processMoney();
-    await processFlag()
+    await processFlag();
   }
 };
 
-document.querySelector("button[data-type=converter]") = async function() {
-  await processMoney();
-};
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
   
-  async function fetchFlag(countryCode) {
-    const apiUrl = `https://api.api-ninjas.com/v1/countryflag?country=${countryCode}`;
+  const apiUrl = `https://api.api-ninjas.com/v1/countryflag?country=BR`;
+  await fetch(apiUrl, { method: 'GET', headers: { 'X-Api-Key': 'qIlgw54fbjCvqxB1YFp0qg==QQybneFRQ2BH2F3y'}})
+    .then(response => response.json())
+    .then(data => { imageUrl = data.square_image_url })
+    .catch(error => {
+      console.error(error);
+      return '';
+    });
   
-    return fetch(apiUrl, { method: 'GET', headers: { 'X-Api-Key': 'qIlgw54fbjCvqxB1YFp0qg==QQybneFRQ2BH2F3y'}})
-        .then(response => response.json())
-        .then(data => { return data.square_image_url })
-        .catch(error => {
-            console.error(error);
-            return '';
-        });
-  }
-  
-  async function addFlagsToSelect() {
-  
-    const selectElement = document.getElementById('currencyOutput');
-    const options = selectElement.querySelectorAll('option');
-  
-    for (const option of options) {
-        const countryCode = option.getAttribute('data-country');
-        const flagUrl = await fetchFlag(countryCode);
-  
-        if (flagUrl) {
-          
-        }
-    }
-  }
-
-  addFlagsToSelect();
+  const image = document.getElementById('imageResult');
+  image.src = imageUrl;
 });
 
 
