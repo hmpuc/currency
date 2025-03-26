@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Conversor de Moedas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+        <section class="main">
+            <header>
+                <p class="title">Conversor de Moedas</p>
+            </header>
+            <div class="main_first">
+                <label>
+                    Quantia:
+                    <input class="input_amount" id="moneyInput" placeholder="...">
+                </label>
+                <label>De:
+                    <form>
+                        <select name="list_one" class="list_one" id="currencyInput">
+                            <option value="AED" data-country="AE">AED</option>
+                            <option value="AFN" data-country="AF">AFN</option>
+                            <option value="ALL" data-country="AL">ALL</option>
+                            <option value="AMD" data-country="AM">AMD</option>
+                            <option value="ANG" data-country="AN">ANG</option>
+                            <option value="AOA" data-country="AO">AOA</option>
+                            <option value="ARS" data-country="AR">ARS</option>
+                            <option value="AUD" data-country="AU">AUD</option>
+                            <option value="AWG" data-country="AW">AWG</option>
+                            <option value="AZN" data-country="AZ">AZN</option>
+                            <option value="BAM" data-country="BA">BAM</option>
+                            <option value="BBD" data-country="BB">BBD</option>
+                            <option value="BDT" data-country="BD">BDT</option>
+                            <option value="BGN" data-country="BG">BGN</option>
+                            <option value="BHD" data-country="BH">BHD</option>
+                            <option value="BIF" data-country="BI">BIF</option>
+                            <option value="BMD" data-country="BM">BMD</option>
+                            <option value="BND" data-country="BN">BND</option>
+                            <option value="BOB" data-country="BO">BOB</option>
+                            <option value="BRL" data-country="BR">BRL</option>
+                            <option value="BSD" data-country="BS">BSD</option>
+                            <option value="BTN" data-country="BT">BTN</option>
+                            <option value="BWP" data-country="BW">BWP</option>
+                            <option value="BYN" data-country="BY">BYN</option>
+                            <option value="BZD" data-country="BZ">BZD</option>
+                            <option value="CAD" data-country="CA">CAD</option>
+                            <option value="CDF" data-country="CD">CDF</option>
+                            <option value="CHF" data-country="CH">CHF</option>
+                            <option value="CLP" data-country="CL">CLP</option>
+                            <option value="CNY" data-country="CN">CNY</option>
+                            <option value="COP" data-country="CO">COP</option>
+                            <option value="CRC" data-country="CR">CRC</option>
+                            <option value="CUP" data-country="CU">CUP</option>
+                            <option value="CVE" data-country="CV">CVE</option>
+                            <option value="CZK" data-country="CZ">CZK</option>
+                            <option value="DJF" data-country="DJ">DJF</option>
+                            <option value="DKK" data-country="DK">DKK</option>
+                            <option value="DOP" data-country="DO">DOP</option>
+                            <option value="DZD" data-country="DZ">DZD</option>
+                            <option value="EGP" data-country="EG">EGP</option>
+                            <option value="ERN" data-country="ER">ERN</option>
+                            <option value="ETB" data-country="ET">ETB</option>
+                            <option value="EUR" data-country="EU">EUR</option> 
+                            <option value="FJD" data-country="FJ">FJD</option>
+                            <option value="FKP" data-country="FK">FKP</option>
+                            <option value="FOK" data-country="FO">FOK</option>
+                            <option value="GBP" data-country="GB">GBP</option>
+                            <option value="GEL" data-country="GE">GEL</option>
+                            <option value="GGP" data-country="GG">GGP</option>
+                            <option value="GHS" data-country="GH">GHS</option>
+                            <option value="GIP" data-country="GI">GIP</option>
+                            <option value="GMD" data-country="GM">GMD</option>
+                            <option value="GNF" data-country="GN">GNF</option>
+                            <option value="GTQ" data-country="GT">GTQ</option>
+                            <option value="GYD" data-country="GY">GYD</option>
+                            <option value="HKD" data-country="HK">HKD</option>
+                            <option value="HNL" data-country="HN">HNL</option>
+                            <option value="HRK" data-country="HR">HRK</option>
+                            <option value="HTG" data-country="HT">HTG</option>
+                            <option value="HUF" data-country="HU">HUF</option>
+                            <option value="IDR" data-country="ID">IDR</option>
+                            <option value="ILS" data-country="IL">ILS</option>
+                            <option value="IMP" data-country="IM">IMP</option>
+                            <option value="INR" data-country="IN">INR</option>
+                            <option value="IQD" data-country="IQ">IQD</option>
+                            <option value="IRR" data-country="IR">IRR</option>
+                            <option value="ISK" data-country="IS">ISK</option>
+                            <option value="JEP" data-country="JE">JEP</option>
+                            <option value="JMD" data-country="JM">JMD</option>
+                            <option value="JOD" data-country="JO">JOD</option>
+                            <option value="JPY" data-country="JP">JPY</option>
+                            <option value="KES" data-country="KE">KES</option>
+                            <option value="KGS" data-country="KG">KGS</option>
+                            <option value="KHR" data-country="KH">KHR</option>
+                            <option value="KID" data-country="KI">KID</option>
+                            <option value="KMF" data-country="KM">KMF</option>
+                            <option value="KRW" data-country="KR">KRW</option>
+                            <option value="KWD" data-country="KW">KWD</option>
+                            <option value="KYD" data-country="KY">KYD</option>
+                            <option value="KZT" data-country="KZ">KZT</option>
+                            <option value="LAK" data-country="LA">LAK</option>
+                            <option value="LBP" data-country="LB">LBP</option>
+                            <option value="LKR" data-country="LK">LKR</option>
+                            <option value="LRD" data-country="LR">LRD</option>
+                            <option value="LSL" data-country="LS">LSL</option>
+                            <option value="LYD" data-country="LY">LYD</option>
+                            <option value="MAD" data-country="MA">MAD</option>
+                            <option value="MDL" data-country="MD">MDL</option>
+                            <option value="MGA" data-country="MG">MGA</option>
+                            <option value="MKD" data-country="MK">MKD</option>
+                            <option value="MMK" data-country="MM">MMK</option>
+                            <option value="MNT" data-country="MN">MNT</option>
+                            <option value="MOP" data-country="MO">MOP</option>
+                            <option value="MRU" data-country="MR">MRU</option>
+                            <option value="MUR" data-country="MU">MUR</option>
+                            <option value="MVR" data-country="MV">MVR</option>
+                            <option value="MWK" data-country="MW">MWK</option>
+                            <option value="MXN" data-country="MX">MXN</option>
+                            <option value="MYR" data-country="MY">MYR</option>
+                            <option value="MZN" data-country="MZ">MZN</option>
+                            <option value="NAD" data-country="NA">NAD</option>
+                            <option value="NGN" data-country="NG">NGN</option>
+                            <option value="NIO" data-country="NI">NIO</option>
+                            <option value="NOK" data-country="NO">NOK</option>
+                            <option value="NPR" data-country="NP">NPR</option>
+                            <option value="NZD" data-country="NZ">NZD</option>
+                            <option value="OMR" data-country="OM">OMR</option>
+                            <option value="PAB" data-country="PA">PAB</option>
+                            <option value="PEN" data-country="PE">PEN</option>
+                            <option value="PGK" data-country="PG">PGK</option>
+                            <option value="PHP" data-country="PH">PHP</option>
+                            <option value="PKR" data-country="PK">PKR</option>
+                            <option value="PLN" data-country="PL">PLN</option>
+                            <option value="PYG" data-country="PY">PYG</option>
+                            <option value="QAR" data-country="QA">QAR</option>
+                            <option value="RON" data-country="RO">RON</option>
+                            <option value="RSD" data-country="RS">RSD</option>
+                            <option value="RUB" data-country="RU">RUB</option>
+                            <option value="RWF" data-country="RW">RWF</option>
+                            <option value="SAR" data-country="SA">SAR</option>
+                            <option value="SBD" data-country="SB">SBD</option>
+                            <option value="SCR" data-country="SC">SCR</option>
+                            <option value="SDG" data-country="SD">SDG</option>
+                            <option value="SEK" data-country="SE">SEK</option>
+                            <option value="SGD" data-country="SG">SGD</option>
+                            <option value="SHP" data-country="SH">SHP</option>
+                            <option value="SLE" data-country="SL">SLE</option>
+                            <option value="SOS" data-country="SO">SOS</option>
+                            <option value="SRD" data-country="SR">SRD</option>
+                            <option value="SSP" data-country="SS">SSP</option>
+                            <option value="STN" data-country="ST">STN</option>
+                            <option value="SYP" data-country="SY">SYP</option>
+                            <option value="SZL" data-country="SZ">SZL</option>
+                            <option value="THB" data-country="TH">THB</option>
+                            <option value="TJS" data-country="TJ">TJS</option>
+                            <option value="TMT" data-country="TM">TMT</option>
+                            <option value="TND" data-country="TN">TND</option>
+                            <option value="TOP" data-country="TO">TOP</option>
+                            <option value="TRY" data-country="TR">TRY</option>
+                            <option value="TTD" data-country="TT">TTD</option>
+                            <option value="TVD" data-country="TV">TVD</option>
+                            <option value="TWD" data-country="TW">TWD</option>
+                            <option value="TZS" data-country="TZ">TZS</option>
+                            <option value="UAH" data-country="UA">UAH</option>
+                            <option value="UGX" data-country="UG">UGX</option>
+                            <option value="USD" data-country="US">USD</option>
+                            <option value="UYU" data-country="UY">UYU</option>
+                            <option value="UZS" data-country="UZ">UZS</option>
+                            <option value="VES" data-country="VE">VES</option>
+                            <option value="VND" data-country="VN">VND</option>
+                            <option value="VUV" data-country="VU">VUV</option>
+                            <option value="WST" data-country="WS">WST</option>
+                            <option value="XAF" data-country="XAF">XAF</option>
+                            <option value="XCD" data-country="XCD">XCD</option>
+                            <option value="XDR" data-country="XDR">XDR</option>
+                            <option value="XOF" data-country="XOF">XOF</option>
+                            <option value="XPF" data-country="XPF">XPF</option>
+                            <option value="YER" data-country="YE">YER</option>
+                            <option value="ZAR" data-country="ZA">ZAR</option>
+                            <option value="ZMW" data-country="ZM">ZMW</option>
+                            <option value="ZWL" data-country="ZW">ZWL</option>
+                        </select>
+                    </form>
+                </label>
+                <p></p>
+                <label> <p><br></p>
+                <img class="imageResult" id="imageResult" src="" width="45" height="45">
+                </label>
+                <label> <p><br></p>
+                <p id="moneyOutput" class="result_amount" >AED 0,00</p>
+                </label>
+                <label>Para:
+                    <form>
+                        <select name="list_two" class="list_two" id="currencyOutput">
+                            <option value="AED" data-country="AE">AED</option>
+                            <option value="AFN" data-country="AF">AFN</option>
+                            <option value="ALL" data-country="AL">ALL</option>
+                            <option value="AMD" data-country="AM">AMD</option>
+                            <option value="ANG" data-country="AN">ANG</option>
+                            <option value="AOA" data-country="AO">AOA</option>
+                            <option value="ARS" data-country="AR">ARS</option>
+                            <option value="AUD" data-country="AU">AUD</option>
+                            <option value="AWG" data-country="AW">AWG</option>
+                            <option value="AZN" data-country="AZ">AZN</option>
+                            <option value="BAM" data-country="BA">BAM</option>
+                            <option value="BBD" data-country="BB">BBD</option>
+                            <option value="BDT" data-country="BD">BDT</option>
+                            <option value="BGN" data-country="BG">BGN</option>
+                            <option value="BHD" data-country="BH">BHD</option>
+                            <option value="BIF" data-country="BI">BIF</option>
+                            <option value="BMD" data-country="BM">BMD</option>
+                            <option value="BND" data-country="BN">BND</option>
+                            <option value="BOB" data-country="BO">BOB</option>
+                            <option value="BRL" data-country="BR">BRL</option>
+                            <option value="BSD" data-country="BS">BSD</option>
+                            <option value="BTN" data-country="BT">BTN</option>
+                            <option value="BWP" data-country="BW">BWP</option>
+                            <option value="BYN" data-country="BY">BYN</option>
+                            <option value="BZD" data-country="BZ">BZD</option>
+                            <option value="CAD" data-country="CA">CAD</option>
+                            <option value="CDF" data-country="CD">CDF</option>
+                            <option value="CHF" data-country="CH">CHF</option>
+                            <option value="CLP" data-country="CL">CLP</option>
+                            <option value="CNY" data-country="CN">CNY</option>
+                            <option value="COP" data-country="CO">COP</option>
+                            <option value="CRC" data-country="CR">CRC</option>
+                            <option value="CUP" data-country="CU">CUP</option>
+                            <option value="CVE" data-country="CV">CVE</option>
+                            <option value="CZK" data-country="CZ">CZK</option>
+                            <option value="DJF" data-country="DJ">DJF</option>
+                            <option value="DKK" data-country="DK">DKK</option>
+                            <option value="DOP" data-country="DO">DOP</option>
+                            <option value="DZD" data-country="DZ">DZD</option>
+                            <option value="EGP" data-country="EG">EGP</option>
+                            <option value="ERN" data-country="ER">ERN</option>
+                            <option value="ETB" data-country="ET">ETB</option>
+                            <option value="EUR" data-country="EU">EUR</option> 
+                            <option value="FJD" data-country="FJ">FJD</option>
+                            <option value="FKP" data-country="FK">FKP</option>
+                            <option value="FOK" data-country="FO">FOK</option>
+                            <option value="GBP" data-country="GB">GBP</option>
+                            <option value="GEL" data-country="GE">GEL</option>
+                            <option value="GGP" data-country="GG">GGP</option>
+                            <option value="GHS" data-country="GH">GHS</option>
+                            <option value="GIP" data-country="GI">GIP</option>
+                            <option value="GMD" data-country="GM">GMD</option>
+                            <option value="GNF" data-country="GN">GNF</option>
+                            <option value="GTQ" data-country="GT">GTQ</option>
+                            <option value="GYD" data-country="GY">GYD</option>
+                            <option value="HKD" data-country="HK">HKD</option>
+                            <option value="HNL" data-country="HN">HNL</option>
+                            <option value="HRK" data-country="HR">HRK</option>
+                            <option value="HTG" data-country="HT">HTG</option>
+                            <option value="HUF" data-country="HU">HUF</option>
+                            <option value="IDR" data-country="ID">IDR</option>
+                            <option value="ILS" data-country="IL">ILS</option>
+                            <option value="IMP" data-country="IM">IMP</option>
+                            <option value="INR" data-country="IN">INR</option>
+                            <option value="IQD" data-country="IQ">IQD</option>
+                            <option value="IRR" data-country="IR">IRR</option>
+                            <option value="ISK" data-country="IS">ISK</option>
+                            <option value="JEP" data-country="JE">JEP</option>
+                            <option value="JMD" data-country="JM">JMD</option>
+                            <option value="JOD" data-country="JO">JOD</option>
+                            <option value="JPY" data-country="JP">JPY</option>
+                            <option value="KES" data-country="KE">KES</option>
+                            <option value="KGS" data-country="KG">KGS</option>
+                            <option value="KHR" data-country="KH">KHR</option>
+                            <option value="KID" data-country="KI">KID</option>
+                            <option value="KMF" data-country="KM">KMF</option>
+                            <option value="KRW" data-country="KR">KRW</option>
+                            <option value="KWD" data-country="KW">KWD</option>
+                            <option value="KYD" data-country="KY">KYD</option>
+                            <option value="KZT" data-country="KZ">KZT</option>
+                            <option value="LAK" data-country="LA">LAK</option>
+                            <option value="LBP" data-country="LB">LBP</option>
+                            <option value="LKR" data-country="LK">LKR</option>
+                            <option value="LRD" data-country="LR">LRD</option>
+                            <option value="LSL" data-country="LS">LSL</option>
+                            <option value="LYD" data-country="LY">LYD</option>
+                            <option value="MAD" data-country="MA">MAD</option>
+                            <option value="MDL" data-country="MD">MDL</option>
+                            <option value="MGA" data-country="MG">MGA</option>
+                            <option value="MKD" data-country="MK">MKD</option>
+                            <option value="MMK" data-country="MM">MMK</option>
+                            <option value="MNT" data-country="MN">MNT</option>
+                            <option value="MOP" data-country="MO">MOP</option>
+                            <option value="MRU" data-country="MR">MRU</option>
+                            <option value="MUR" data-country="MU">MUR</option>
+                            <option value="MVR" data-country="MV">MVR</option>
+                            <option value="MWK" data-country="MW">MWK</option>
+                            <option value="MXN" data-country="MX">MXN</option>
+                            <option value="MYR" data-country="MY">MYR</option>
+                            <option value="MZN" data-country="MZ">MZN</option>
+                            <option value="NAD" data-country="NA">NAD</option>
+                            <option value="NGN" data-country="NG">NGN</option>
+                            <option value="NIO" data-country="NI">NIO</option>
+                            <option value="NOK" data-country="NO">NOK</option>
+                            <option value="NPR" data-country="NP">NPR</option>
+                            <option value="NZD" data-country="NZ">NZD</option>
+                            <option value="OMR" data-country="OM">OMR</option>
+                            <option value="PAB" data-country="PA">PAB</option>
+                            <option value="PEN" data-country="PE">PEN</option>
+                            <option value="PGK" data-country="PG">PGK</option>
+                            <option value="PHP" data-country="PH">PHP</option>
+                            <option value="PKR" data-country="PK">PKR</option>
+                            <option value="PLN" data-country="PL">PLN</option>
+                            <option value="PYG" data-country="PY">PYG</option>
+                            <option value="QAR" data-country="QA">QAR</option>
+                            <option value="RON" data-country="RO">RON</option>
+                            <option value="RSD" data-country="RS">RSD</option>
+                            <option value="RUB" data-country="RU">RUB</option>
+                            <option value="RWF" data-country="RW">RWF</option>
+                            <option value="SAR" data-country="SA">SAR</option>
+                            <option value="SBD" data-country="SB">SBD</option>
+                            <option value="SCR" data-country="SC">SCR</option>
+                            <option value="SDG" data-country="SD">SDG</option>
+                            <option value="SEK" data-country="SE">SEK</option>
+                            <option value="SGD" data-country="SG">SGD</option>
+                            <option value="SHP" data-country="SH">SHP</option>
+                            <option value="SLE" data-country="SL">SLE</option>
+                            <option value="SOS" data-country="SO">SOS</option>
+                            <option value="SRD" data-country="SR">SRD</option>
+                            <option value="SSP" data-country="SS">SSP</option>
+                            <option value="STN" data-country="ST">STN</option>
+                            <option value="SYP" data-country="SY">SYP</option>
+                            <option value="SZL" data-country="SZ">SZL</option>
+                            <option value="THB" data-country="TH">THB</option>
+                            <option value="TJS" data-country="TJ">TJS</option>
+                            <option value="TMT" data-country="TM">TMT</option>
+                            <option value="TND" data-country="TN">TND</option>
+                            <option value="TOP" data-country="TO">TOP</option>
+                            <option value="TRY" data-country="TR">TRY</option>
+                            <option value="TTD" data-country="TT">TTD</option>
+                            <option value="TVD" data-country="TV">TVD</option>
+                            <option value="TWD" data-country="TW">TWD</option>
+                            <option value="TZS" data-country="TZ">TZS</option>
+                            <option value="UAH" data-country="UA">UAH</option>
+                            <option value="UGX" data-country="UG">UGX</option>
+                            <option value="USD" data-country="US">USD</option>
+                            <option value="UYU" data-country="UY">UYU</option>
+                            <option value="UZS" data-country="UZ">UZS</option>
+                            <option value="VES" data-country="VE">VES</option>
+                            <option value="VND" data-country="VN">VND</option>
+                            <option value="VUV" data-country="VU">VUV</option>
+                            <option value="WST" data-country="WS">WST</option>
+                            <option value="XAF" data-country="XAF">XAF</option>
+                            <option value="XCD" data-country="XCD">XCD</option>
+                            <option value="XDR" data-country="XDR">XDR</option>
+                            <option value="XOF" data-country="XOF">XOF</option>
+                            <option value="XPF" data-country="XPF">XPF</option>
+                            <option value="YER" data-country="YE">YER</option>
+                            <option value="ZAR" data-country="ZA">ZAR</option>
+                            <option value="ZMW" data-country="ZM">ZMW</option>
+                            <option value="ZWL" data-country="ZW">ZWL</option>
+                        </select>
+                    </form>
+                </label>
+            </div>
+            
+            <article class="main_second">
+                <button type="button" onclick="processClick()" class="result_btn">Converter</button>
+            </article>
+        </section>
+    <script src='main.js'></script> 
+</body>
+</html>
